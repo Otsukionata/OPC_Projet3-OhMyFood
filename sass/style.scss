@@ -1,0 +1,85 @@
+$color-primary: #9356dc;
+$color-secondary: #ff79da;
+$color-tertiary: #99e2d0;
+$box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: rgb(234, 234, 234);
+}
+
+h1 {
+  font-family: "Shrikhand", cursive;
+  font-size: 2em;
+  text-align: center;
+}
+
+h2 {
+  margin: 25px;
+  font-size: 2em;
+  font-weight: 500;
+  text-align: center;
+}
+
+h3 {
+  font-size: 1.3em;
+  font-weight: 300;
+  text-align: center;
+}
+
+h4 {
+  margin: 25px;
+  font-size: 2em;
+  font-weight: 500;
+  text-align: left;
+}
+
+.logo {
+  width: 100%;
+  height: 55px;
+  padding: 5px;
+  background-color: #fff;
+  box-shadow: $box-shadow;
+}
+
+.localisation {
+  display: flex;
+  height: 70px;
+  align-items: center;
+  justify-content: center;
+  //   background-color: rgb(234, 234, 234);
+  i {
+    margin-right: 5px;
+  }
+}
+
+.explore {
+  background-color: rgb(246, 246, 246);
+  padding: 20px;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $color-secondary;
+  background: linear-gradient(176deg, $color-secondary 0%, $color-primary 100%);
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  box-shadow: $box-shadow;
+  height: 50px;
+  width: 250px;
+  margin: 20px auto;
+}
+
+// .fonctionnement {
+//   background-color: #fff;
+//   padding: 20px;
+// }
