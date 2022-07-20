@@ -45,6 +45,17 @@ h4 {
   text-align: left;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
 .logo {
   width: 100%;
   height: 60px;
@@ -91,11 +102,12 @@ h4 {
 }
 
 .fonctionnement {
+  padding: 20px 0;
   background-color: #fff;
-  padding: 20px;
 }
 
 .instructions {
+  margin: 15px;
   display: block;
 }
 
@@ -139,6 +151,35 @@ h4 {
   font-size: 0.8em;
   padding: 0.4em;
   text-align: center;
+}
+
+.carte-resto {
+  height: 250px;
+  width: 20em;
+  margin: 0 auto;
+  border-radius: 0.8em;
+  background-color: #fff;
+  box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.3);
+}
+
+.carte-img {
+  object-fit: cover;
+  height: 75%;
+}
+.carte-img img {
+  width: 100%;
+}
+
+.description {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  font-size: 1.2em;
+  font-weight: 300;
+}
+.description p {
+  margin: 5px 0;
+  font-size: 0.8em;
 }
 
 /*# sourceMappingURL=style.css.map */
