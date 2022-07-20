@@ -1,18 +1,19 @@
 $color-primary: #9356dc;
 $color-secondary: #ff79da;
 $color-tertiary: #99e2d0;
-$box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+$color-quaternary: rgb(246, 246, 246);
+$box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.3);
 
 @keyframes moveInBottom {
-    0% {
-        opacity: 0;
-        transform: translateY(30px);
-    }
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
 
-    100% {
-        opacity: 1;
-        transform: translateY(0px);
-    }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
 }
 
 * {
@@ -47,32 +48,31 @@ h3 {
 
 h4 {
   margin: 25px;
-  font-size: 2em;
+  font-size: 1.6em;
   font-weight: 500;
   text-align: left;
 }
 
 .logo {
   width: 100%;
-  height: 55px;
-  padding: 5px;
+  height: 60px;
+  padding: 0.5rem;
   background-color: #fff;
   box-shadow: $box-shadow;
 }
 
 .localisation {
   display: flex;
-  height: 70px;
+  height: 50px;
   align-items: center;
   justify-content: center;
-  //   background-color: rgb(234, 234, 234);
   i {
     margin-right: 5px;
   }
 }
 
 .explore {
-  background-color: rgb(246, 246, 246);
+  background-color: $color-quaternary;
   padding: 20px;
 }
 
@@ -94,14 +94,63 @@ h4 {
   &:hover {
     transform: translateY(3px);
     background: $color-secondary;
-    background: linear-gradient(180deg, $color-secondary 0%, $color-primary 100%);
-    box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.3);
+    background: linear-gradient(
+      180deg,
+      $color-secondary 0%,
+      $color-primary 100%
+    );
+    box-shadow: 0 0.1rem 1.1rem rgba(0, 0, 0, 0.3);
   }
 }
 
+.fonctionnement {
+  background-color: #fff;
+  padding: 20px;
+}
 
+.instructions {
+  display: block;
+}
 
-// .fonctionnement {
-//   background-color: #fff;
-//   padding: 20px;
-// }
+.etape {
+  position: relative;
+  display: flex;
+}
+
+.howTo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  height: 70px;
+  width: 350px;
+  background-color: $color-quaternary;
+  border-radius: 20px;
+  box-shadow: $box-shadow;
+  i {
+    margin-right: 25px;
+    color: rgb(88, 88, 88);
+  }
+
+  .fa-store {
+    color: $color-primary;
+  }
+}
+.violet {
+  background-color: lighten($color: $color-primary, $amount: 35%);
+}
+
+.numero {
+  position: absolute;
+  top: 45px;
+  left: 10px;
+  background-color: $color-primary;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 0.8em;
+  padding: 0.4em;
+  text-align: center;
+}
+
