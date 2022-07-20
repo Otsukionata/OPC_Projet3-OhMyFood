@@ -3,6 +3,18 @@ $color-secondary: #ff79da;
 $color-tertiary: #99e2d0;
 $box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
 
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -77,7 +89,17 @@ h4 {
   height: 50px;
   width: 250px;
   margin: 20px auto;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    transform: translateY(3px);
+    background: $color-secondary;
+    background: linear-gradient(180deg, $color-secondary 0%, $color-primary 100%);
+    box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.3);
+  }
 }
+
+
 
 // .fonctionnement {
 //   background-color: #fff;
