@@ -1,7 +1,7 @@
 $color-primary: #9356dc;
 $color-secondary: #ff79da;
 $color-tertiary: #99e2d0;
-$color-quaternary: rgb(246, 246, 246);
+$color-quaternary: #f6f6f6;
 $box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.3);
 $img-radius: 0.5rem 0.5rem 0 0;
 
@@ -38,7 +38,7 @@ h3 {
 }
 
 h4 {
-  margin: 25px;
+  margin: 0 30px;
   font-size: 1.6em;
   font-weight: 500;
   text-align: left;
@@ -49,6 +49,11 @@ a {
   color: inherit;
 }
 
+ul li {
+  list-style: none;
+  line-height: 1.8em;
+}
+
 img {
   max-width: 100%;
   max-height: 100%;
@@ -56,54 +61,60 @@ img {
 }
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Header ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-.logo {
-  width: 100%;
-  height: 60px;
-  padding: 0.5rem;
-  background-color: #fff;
-  box-shadow: $box-shadow;
-}
-
-.localisation {
-  display: flex;
-  height: 50px;
-  align-items: center;
-  justify-content: center;
-  i {
-    margin-right: 5px;
+header {
+  .logo {
+    width: 100%;
+    height: 60px;
+    padding: 0.5rem;
+    background-color: #fff;
+    box-shadow: $box-shadow;
   }
-}
 
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Accroche et Call to Action ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-.explore {
-  background-color: $color-quaternary;
-  padding: 20px;
-}
+  .localisation {
+    display: flex;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    i {
+      margin-right: 5px;
+    }
+  }
 
-.btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: $color-secondary;
-  background: linear-gradient(176deg, $color-secondary 0%, $color-primary 100%);
-  color: #fff;
-  border: none;
-  border-radius: 25px;
-  box-shadow: $box-shadow;
-  height: 50px;
-  width: 250px;
-  margin: 20px auto;
-  transition: all 0.2s ease-in-out;
+  .explore {
+    // Accroche
+    background-color: $color-quaternary;
+    padding: 20px;
+  }
 
-  &:hover {
-    transform: translateY(3px);
+  .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background: $color-secondary;
     background: linear-gradient(
-      180deg,
+      176deg,
       $color-secondary 0%,
       $color-primary 100%
     );
-    box-shadow: 0 0.1rem 1.1rem rgba(0, 0, 0, 0.3);
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    box-shadow: $box-shadow;
+    height: 50px;
+    width: 250px;
+    margin: 20px auto;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      transform: translateY(3px);
+      background: $color-secondary;
+      background: linear-gradient(
+        180deg,
+        $color-secondary 0%,
+        $color-primary 100%
+      );
+      box-shadow: 0 0.1rem 1.1rem rgba(0, 0, 0, 0.3);
+    }
   }
 }
 
@@ -111,83 +122,123 @@ img {
 .fonctionnement {
   padding: 20px 0;
   background-color: #fff;
+
+  .fonctionnement__container {
+    margin: 15px;
+    display: block;
+  }
 }
 
-.instructions {
-  margin: 15px;
-  display: block;
-}
-
-.etape {
+.faux-btn {
   position: relative;
   display: flex;
-}
 
-.howTo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 20px;
-  height: 70px;
-  width: 350px;
-  background-color: $color-quaternary;
-  border-radius: 20px;
-  box-shadow: $box-shadow;
-  i {
-    margin-right: 25px;
-    color: rgb(88, 88, 88);
+  &__numero {
+    position: absolute;
+    top: 45px;
+    left: 10px;
+    background-color: $color-primary;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 0.8em;
+    padding: 0.4em;
+    text-align: center;
   }
 
-  .fa-store {
-    color: $color-primary;
-  }
-}
-.violet {
-  background-color: lighten($color: $color-primary, $amount: 35%);
-}
+  &__txt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    height: 70px;
+    width: 350px;
+    background-color: $color-quaternary;
+    border-radius: 20px;
+    box-shadow: $box-shadow;
+    font-weight: 500;
+    padding-left: 15px;
 
-.numero {
-  position: absolute;
-  top: 45px;
-  left: 10px;
-  background-color: $color-primary;
-  height: 25px;
-  width: 25px;
-  border-radius: 50%;
-  color: #fff;
-  font-size: 0.8em;
-  padding: 0.4em;
-  text-align: center;
+    &--violet {
+      background-color: lighten($color: $color-primary, $amount: 35%);
+    }
+  }
+
+  .ico__color {
+    position: absolute;
+    left: 55px;
+    color: #585858;
+
+    &--violet {
+      @extend .ico__color;
+      color: $color-primary;
+    }
+  }
 }
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Les restaurants ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-.carte-resto {
+.restaurants {
+  margin: 50px 0;
+}
+
+.carte {
   height: 250px;
   width: 20em;
-  margin: 0 auto;
+  margin: 30px auto;
   border-radius: 0.8em;
   background-color: #fff;
   box-shadow: $box-shadow;
-}
 
-.carte-img {
-  object-fit: cover;
-  height: 75%;
+  &__img {
+    object-fit: cover;
+    height: 75%;
 
-  img {
-    width: 100%;
+    img {
+      width: 100%;
+    }
+  }
+
+  &__description {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    font-size: 1.2em;
+    font-weight: 300;
+
+    p {
+      margin: 5px 0;
+      font-size: 0.8em;
+    }
   }
 }
 
-.description {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px;
-  font-size: 1.2em;
-  font-weight: 300;
+.nouveau {
+  position: relative;
 
-  p {
-    margin: 5px 0;
-    font-size: 0.8em;
+  &::before {
+    content: "Nouveau";
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    background-color: $color-tertiary;
+    color: darken($color: $color-tertiary, $amount: 40%);
+    padding: 0.5em;
+    border-radius: 0.2em;
   }
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Footer ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+footer {
+  background-color: #353535;
+  color: #fff;
+  padding: 1em 2em;
+}
+
+.footer__logo {
+  color: #fff;
+  font-family: "Shrikhand", cursive;
+  font-size: 1.3em;
+  margin: 20px 0;
 }
