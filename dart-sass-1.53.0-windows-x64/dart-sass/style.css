@@ -190,9 +190,13 @@ header .btn:hover {
   margin: 5px 0;
   font-size: 0.8em;
 }
-.carte .fa-solid {
+
+.icones {
+  position: relative;
+}
+.icones .fa-solid {
   position: absolute;
-  right: 40px;
+  right: 10px;
   color: transparent;
   background: linear-gradient(180deg, #9356dc 0%, #ff79da 100%);
   background-clip: text;
@@ -200,16 +204,16 @@ header .btn:hover {
   opacity: 0;
   transition: all 0.2s ease-in-out;
 }
-.carte .fa-solid:hover {
+.icones .fa-solid:hover {
   opacity: 1;
   transform: scale(1.3);
   animation: pulsation 0.4s infinite;
 }
-.carte .fa-regular {
+.icones .fa-regular {
   position: absolute;
-  right: 40px;
+  right: 10px;
 }
-.carte .fa-regular:hover {
+.icones .fa-regular:hover {
   opacity: 0;
 }
 

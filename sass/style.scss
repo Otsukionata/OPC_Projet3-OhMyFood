@@ -222,9 +222,13 @@ header {
     }
   }
 
+}
+.icones{
+  position: relative;
+  
   .fa-solid {
     position: absolute;
-    right: 40px;
+    right: 10px;
     color: transparent;
     background: linear-gradient(
       180deg,
@@ -245,7 +249,7 @@ header {
 
   .fa-regular {
     position: absolute;
-    right: 40px;
+    right: 10px;
 
     &:hover {
       opacity: 0;
