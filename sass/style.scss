@@ -116,7 +116,7 @@ header {
     transition: all 0.2s ease-in-out;
 
     &:hover {
-      transform: translateY(3px);
+      transform: translateY(2px);
       background: $color-secondary;
       background: linear-gradient(
         180deg,
@@ -221,11 +221,10 @@ header {
       font-size: 0.8em;
     }
   }
-
 }
-.icones{
+.icones {
   position: relative;
-  
+
   .fa-solid {
     position: absolute;
     right: 10px;
@@ -289,4 +288,16 @@ footer {
 
 .ico {
   width: 25px;
+}
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Pages restaurants ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fleche {
+  margin: 0 20px;
 }
