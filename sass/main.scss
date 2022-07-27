@@ -1,21 +1,8 @@
-$color-primary: #9356dc;
-$color-secondary: #ff79da;
-$color-tertiary: #99e2d0;
-$color-quaternary: #f6f6f6;
-$box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.3);
-$img-radius: 0.5rem 0.5rem 0 0;
+@use "abstracts/variables";
+@use "abstracts/mixins";
+@use "layouts/footer.scss";
 
-@keyframes pulsation {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.2);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
+
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Aspect général du site ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 * {
   padding: 0;
@@ -67,7 +54,7 @@ ul li {
 img {
   max-width: 100%;
   max-height: 100%;
-  border-radius: $img-radius;
+  border-radius: variables.$img-radius;
 }
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Header ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -77,7 +64,7 @@ header {
     height: 60px;
     padding: 0.5rem;
     background-color: #fff;
-    box-shadow: $box-shadow;
+    box-shadow: variables.$box-shadow;
   }
 
   .localisation {
@@ -92,7 +79,7 @@ header {
 
   .explore {
     // Accroche
-    background-color: $color-quaternary;
+    background-color: variables.$color-quaternary;
     padding: 20px;
   }
 
@@ -100,16 +87,17 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: $color-secondary;
+    background: variables.$color-secondary;
     background: linear-gradient(
       176deg,
-      $color-secondary 0%,
-      $color-primary 100%
+      variables.$color-secondary 0%,
+      variables.$color-primary 100%
     );
+    cursor: pointer;
     color: #fff;
     border: none;
     border-radius: 25px;
-    box-shadow: $box-shadow;
+    box-shadow: variables.$box-shadow;
     height: 50px;
     width: 250px;
     margin: 20px auto;
@@ -117,11 +105,11 @@ header {
 
     &:hover {
       transform: translateY(2px);
-      background: $color-secondary;
+      background: variables.$color-secondary;
       background: linear-gradient(
         180deg,
-        $color-secondary 0%,
-        $color-primary 100%
+        variables.$color-secondary 0%,
+        variables.$color-primary 100%
       );
       box-shadow: 0 0.1rem 1.1rem rgba(0, 0, 0, 0.3);
     }
@@ -147,7 +135,7 @@ header {
     position: absolute;
     top: 45px;
     left: 10px;
-    background-color: $color-primary;
+    background-color: variables.$color-primary;
     height: 25px;
     width: 25px;
     border-radius: 50%;
@@ -164,14 +152,14 @@ header {
     margin: 20px;
     height: 70px;
     width: 350px;
-    background-color: $color-quaternary;
+    background-color: variables.$color-quaternary;
     border-radius: 20px;
-    box-shadow: $box-shadow;
+    box-shadow: variables.$box-shadow;
     font-weight: 500;
     padding-left: 15px;
 
     &--violet {
-      background-color: lighten($color: $color-primary, $amount: 35%);
+      background-color: lighten($color: variables.$color-primary, $amount: 35%);
     }
   }
 
@@ -182,7 +170,7 @@ header {
 
     &--violet {
       @extend .ico__color;
-      color: $color-primary;
+      color: variables.$color-primary;
     }
   }
 }
@@ -198,7 +186,7 @@ header {
   margin: 30px auto;
   border-radius: 0.8em;
   background-color: #fff;
-  box-shadow: $box-shadow;
+  box-shadow: variables.$box-shadow;
 
   &__img {
     object-fit: cover;
@@ -231,8 +219,8 @@ header {
     color: transparent;
     background: linear-gradient(
       180deg,
-      $color-primary 0%,
-      $color-secondary 100%
+      variables.$color-primary 0%,
+      variables.$color-secondary 100%
     );
     background-clip: text;
     -webkit-background-clip: text;
@@ -264,30 +252,12 @@ header {
     position: absolute;
     top: 10px;
     right: 10px;
-    background-color: $color-tertiary;
-    color: darken($color: $color-tertiary, $amount: 40%);
+    background-color: variables.$color-tertiary;
+    color: darken($color: variables.$color-tertiary, $amount: 40%);
     padding: 0.5em;
     border-radius: 0.2em;
     box-shadow: 1px 1px 20px black;
   }
-}
-
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Footer ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-footer {
-  background-color: #353535;
-  color: #fff;
-  padding: 1em 2em;
-}
-
-.footer__logo {
-  color: #fff;
-  font-family: "Shrikhand", cursive;
-  font-size: 1.3em;
-  margin: 20px 0;
-}
-
-.ico {
-  width: 25px;
 }
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Pages restaurants ~~~~~~~~~~~~~~~~~~~~~~~~~~~~

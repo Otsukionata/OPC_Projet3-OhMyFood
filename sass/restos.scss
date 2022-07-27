@@ -1,9 +1,6 @@
-$color-primary: #9356dc;
-$color-secondary: #ff79da;
-$color-tertiary: #99e2d0;
-$color-quaternary: #f6f6f6;
-$box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.3);
-$menu-radius: 3rem 3rem 0 0;
+@use "abstracts/variables";
+@use "abstracts/mixins";
+@use "layouts/footer.scss";
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Aspect général du site ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 * {
@@ -14,7 +11,7 @@ $menu-radius: 3rem 3rem 0 0;
 
 body {
   font-family: "Roboto", sans-serif;
-  background-color: $color-quaternary;
+  background-color: variables.$color-quaternary;
 }
 
 h1 {
@@ -79,8 +76,8 @@ img {
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Menu ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 .menu {
   width: 100%;
-  background-color: $color-quaternary;
-  border-radius: $menu-radius;
+  background-color: variables.$color-quaternary;
+  border-radius: 3rem 3rem 0 0;
   position: relative;
   top: -8vh;
 
@@ -101,8 +98,8 @@ img {
       color: transparent;
       background: linear-gradient(
         180deg,
-        $color-primary 0%,
-        $color-secondary 100%
+        variables.$color-primary 0%,
+        variables.$color-secondary 100%
       );
       background-clip: text;
       -webkit-background-clip: text;
@@ -142,7 +139,7 @@ img {
       line-height: 23px;
       padding: 5px 15px;
       margin: 20px;
-      box-shadow: $box-shadow;
+      box-shadow: variables.$box-shadow;
       border-radius: 10px;
     }
 
@@ -160,12 +157,12 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: $color-secondary;
-  background: linear-gradient(176deg, $color-secondary 0%, $color-primary 100%);
+  background: variables.$color-secondary;
+  background: linear-gradient(176deg, variables.$color-secondary 0%, variables.$color-primary 100%);
   color: #fff;
   border: none;
   border-radius: 25px;
-  box-shadow: $box-shadow;
+  box-shadow: variables.$box-shadow;
   height: 50px;
   width: 250px;
   margin: 50px auto 0;
@@ -174,29 +171,12 @@ img {
 
   &:hover {
     transform: translateY(2px);
-    background: $color-secondary;
+    background: variables.$color-secondary;
     background: linear-gradient(
       180deg,
-      $color-secondary 0%,
-      $color-primary 100%
+      variables.$color-secondary 0%,
+      variables.$color-primary 100%
     );
     box-shadow: 0 0.1rem 1.1rem rgba(0, 0, 0, 0.3);
   }
-}
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Footer ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-footer {
-  background-color: #353535;
-  color: #fff;
-  padding: 1em 2em;
-}
-
-.footer__logo {
-  color: #fff;
-  font-family: "Shrikhand", cursive;
-  font-size: 1.3em;
-  margin: 20px 0;
-}
-
-.ico {
-  width: 25px;
 }
