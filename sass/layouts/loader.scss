@@ -14,8 +14,8 @@
 
   &__inner {
     position: relative;
-    width: 350px;
-    height: 350px;
+    width: 20rem;
+    height: 20rem;
     border-radius: 50%;
     background: linear-gradient(#9356dc, #ff79da, #99e2d0);
     animation: spinner 1.2s linear infinite;
@@ -43,10 +43,10 @@
     &::after {
       content: "";
       position: absolute;
-      top: 10px;
-      left: 10px;
-      right: 10px;
-      bottom: 10px;
+      top: 1rem;
+      left: 1rem;
+      right: 1rem;
+      bottom: 1rem;
       background: #f6f6f6;
       border: solid white 10px;
       border-radius: 50%;
