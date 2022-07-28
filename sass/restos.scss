@@ -147,15 +147,6 @@ img {
           animation: roue 0.3s cubic-bezier(0.5, 0, 1, 1);
         }
       }
-
-      .prix {
-        display: flex;
-        padding: 5px;
-        height: 100%;
-        width: 2em;
-        align-items: flex-end;
-        margin-right: 1em;
-      }
     }
 
     &__ok {
@@ -177,6 +168,15 @@ img {
       text-overflow: fade(10px) ellipsis;
       width: 280px;
       padding: 5px 15px;
+    }
+
+    &__prix {
+      display: flex;
+      padding: 5px;
+      height: 100%;
+      width: 2em;
+      align-items: flex-end;
+      margin-right: 1em;
     }
   }
 }
