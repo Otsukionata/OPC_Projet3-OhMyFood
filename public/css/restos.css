@@ -11,6 +11,10 @@
   }
 }
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Header ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+header {
+  /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Général : logo ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+  /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Index : localisation et phrase d'accroche ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+}
 header .bandeau {
   position: relative;
   display: flex;
@@ -19,18 +23,9 @@ header .bandeau {
   width: 100%;
   height: 60px;
   background-color: #fff;
-  /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Index : localisation et phrase d'accroche ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+  box-shadow: 0 0.1rem 1.1rem rgba(0, 0, 0, 0.3019607843);
   /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Pages restaurants : Flèche retour ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
   /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Pages restaurants : Image de couverture ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-}
-header .bandeau .localisation {
-  display: flex;
-  height: 50px;
-  align-items: center;
-  justify-content: center;
-}
-header .bandeau .localisation i {
-  margin-right: 5px;
 }
 header .bandeau .explore {
   background-color: #f6f6f6;
@@ -45,6 +40,16 @@ header .bandeau__fleche {
 header .bandeau .couverture {
   position: absolute;
   top: 10vh;
+}
+header .localisation {
+  display: flex;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  background-color: #dddddd;
+}
+header .localisation i {
+  margin-right: 5px;
 }
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Footer ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -156,17 +161,9 @@ img {
 .menu .icones .fa-regular:hover {
   opacity: 0;
 }
-.menu .menuBloc,
-.menu .menuBloc,
 .menu .menuBloc {
   padding: 15px;
 }
-.menu .menuBloc__specialite, .menu .menuBloc__specialite, .menu .menuBloc__specialite,
-.menu .menuBloc__specialite,
-.menu .menuBloc__specialite,
-.menu .menuBloc__specialite,
-.menu .menuBloc__specialite,
-.menu .menuBloc__specialite,
 .menu .menuBloc__specialite {
   display: flex;
   justify-content: space-between;
@@ -179,8 +176,22 @@ img {
   box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.3019607843);
   border-radius: 10px;
 }
-.menu .menuBloc__txt,
-.menu .menuBloc__txt,
+.menu .menuBloc__specialite:nth-child(1) {
+  animation: apparition 1s ease-out both;
+  animation-delay: 0.25s;
+}
+.menu .menuBloc__specialite:nth-child(2) {
+  animation: apparition 1s ease-out both;
+  animation-delay: 0.5s;
+}
+.menu .menuBloc__specialite:nth-child(3) {
+  animation: apparition 1s ease-out both;
+  animation-delay: 0.75s;
+}
+.menu .menuBloc__specialite:nth-child(4) {
+  animation: apparition 1s ease-out both;
+  animation-delay: 1s;
+}
 .menu .menuBloc__txt {
   white-space: nowrap;
   overflow: hidden;
@@ -210,6 +221,18 @@ img {
   background: #ff79da;
   background: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
   box-shadow: 0 0.1rem 1.1rem rgba(0, 0, 0, 0.3);
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Animations du menu ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+@keyframes apparition {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /*# sourceMappingURL=restos.css.map */

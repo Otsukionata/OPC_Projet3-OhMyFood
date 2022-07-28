@@ -104,12 +104,9 @@ img {
     }
   }
 
-  .menuBloc,
-  .menuBloc,
   .menuBloc {
     padding: 15px;
-    &__specialite,
-    &__specialite,
+
     &__specialite {
       display: flex;
       justify-content: space-between;
@@ -121,6 +118,13 @@ img {
       margin: 20px;
       box-shadow: variables.$box-shadow;
       border-radius: 10px;
+      
+      @for $i from 1 through 4 {
+        &:nth-child(#{$i}) {
+          animation: apparition 1s ease-out both;
+          animation-delay: $i * 0.25s;
+        }
+      }
     }
 
     &__txt {
@@ -138,7 +142,11 @@ img {
   align-items: center;
   justify-content: center;
   background: variables.$color-secondary;
-  background: linear-gradient(176deg, variables.$color-secondary 0%, variables.$color-primary 100%);
+  background: linear-gradient(
+    176deg,
+    variables.$color-secondary 0%,
+    variables.$color-primary 100%
+  );
   color: #fff;
   border: none;
   border-radius: 25px;
@@ -158,5 +166,17 @@ img {
       variables.$color-primary 100%
     );
     box-shadow: 0 0.1rem 1.1rem rgba(0, 0, 0, 0.3);
+  }
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Animations du menu ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+@keyframes apparition {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
