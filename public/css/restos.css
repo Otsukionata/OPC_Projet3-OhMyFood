@@ -27,7 +27,7 @@ header .bandeau {
   /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Pages restaurants : Flèche retour ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
   /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Pages restaurants : Image de couverture ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 }
-header .bandeau .explore {
+header .bandeau .accroche {
   background-color: #f6f6f6;
   padding: 20px;
 }
@@ -97,6 +97,16 @@ h3 {
   font-size: 1.3em;
   font-weight: 300;
   margin: 0 20px;
+  position: relative;
+}
+h3::after {
+  content: "";
+  top: 1.4em;
+  left: 0;
+  position: absolute;
+  height: 0.1rem;
+  width: 2rem;
+  background-color: #99e2d0;
 }
 
 h4 {

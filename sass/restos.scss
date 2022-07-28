@@ -30,6 +30,17 @@ h3 {
   font-size: 1.3em;
   font-weight: 300;
   margin: 0 20px;
+  position: relative;
+
+  &::after {
+    content: "";
+    top: 1.4em;
+    left: 0;
+    position: absolute;
+    height: .1rem;
+    width: 2rem;
+    background-color: variables.$color-tertiary;
+  }
 }
 
 h4 {
