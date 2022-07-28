@@ -141,7 +141,11 @@ img {
 
       &:hover .menuBloc__ok {
         margin-right: -2px;
-        animation: valide .2s ease-in-out;
+        animation: valide 0.3s ease-in-out;
+
+        .fa-circle-check {
+          animation: roue 0.3s cubic-bezier(0.5, 0, 1, 1);
+        }
       }
 
       .prix {
@@ -234,5 +238,13 @@ img {
   100% {
     opacity: 1;
   }
-  
+}
+
+@keyframes roue {
+  0% {
+    transform: rotate(260deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
