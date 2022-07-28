@@ -29,7 +29,7 @@ h2 {
 h3 {
   font-size: 1.3em;
   font-weight: 300;
-  margin: 0 20px;
+  margin: 30px 20px 0 20px;
   position: relative;
 
   &::after {
@@ -37,7 +37,7 @@ h3 {
     top: 1.4em;
     left: 0;
     position: absolute;
-    height: .1rem;
+    height: 0.1rem;
     width: 2rem;
     background-color: variables.$color-tertiary;
   }
@@ -116,26 +116,55 @@ img {
   }
 
   .menuBloc {
-    padding: 15px;
+    display: flex;
+    flex-direction: column;
 
     &__specialite {
+      cursor: pointer;
       display: flex;
       justify-content: space-between;
       align-items: flex-end;
       width: 90%;
       height: 60px;
       line-height: 23px;
-      padding: 5px 15px;
       margin: 20px;
       box-shadow: variables.$box-shadow;
-      border-radius: 10px;
-      
+      border-radius: 0.5em;
+      transition: all 0.2s ease-in-out;
+
       @for $i from 1 through 4 {
         &:nth-child(#{$i}) {
           animation: apparition 1s ease-out both;
-          animation-delay: $i * 0.25s;
+          animation-delay: $i * 0.3s;
         }
       }
+
+      &:hover .menuBloc__ok {
+        margin-right: -2px;
+        animation: valide .2s ease-in-out;
+      }
+
+      .prix {
+        display: flex;
+        padding: 5px;
+        height: 100%;
+        width: 2em;
+        align-items: flex-end;
+        margin-right: 1em;
+      }
+    }
+
+    &__ok {
+      height: 100%;
+      width: 3em;
+      background-color: variables.$color-tertiary;
+      color: #fff;
+      text-align: center;
+      font-size: 1.1em;
+      padding: 1em;
+      border-radius: 0 0.5em 0.5em 0;
+      margin-right: -10rem;
+      transition: all 0.2s ease-in-out;
     }
 
     &__txt {
@@ -143,6 +172,7 @@ img {
       overflow: hidden;
       text-overflow: fade(10px) ellipsis;
       width: 280px;
+      padding: 5px 15px;
     }
   }
 }
@@ -184,10 +214,25 @@ img {
 @keyframes apparition {
   0% {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(30px);
   }
   100% {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+@keyframes valide {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+  
 }

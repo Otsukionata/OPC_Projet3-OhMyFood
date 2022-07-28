@@ -12,6 +12,7 @@
 }
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Header ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 header {
+  background-color: #fff;
   /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Général : logo ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
   /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Index : localisation et phrase d'accroche ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 }
@@ -96,7 +97,7 @@ h2 {
 h3 {
   font-size: 1.3em;
   font-weight: 300;
-  margin: 0 20px;
+  margin: 30px 20px 0 20px;
   position: relative;
 }
 h3::after {
@@ -172,41 +173,68 @@ img {
   opacity: 0;
 }
 .menu .menuBloc {
-  padding: 15px;
+  display: flex;
+  flex-direction: column;
 }
 .menu .menuBloc__specialite {
+  cursor: pointer;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   width: 90%;
   height: 60px;
   line-height: 23px;
-  padding: 5px 15px;
   margin: 20px;
   box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.3019607843);
-  border-radius: 10px;
+  border-radius: 0.5em;
+  transition: all 0.2s ease-in-out;
 }
 .menu .menuBloc__specialite:nth-child(1) {
   animation: apparition 1s ease-out both;
-  animation-delay: 0.25s;
+  animation-delay: 0.3s;
 }
 .menu .menuBloc__specialite:nth-child(2) {
   animation: apparition 1s ease-out both;
-  animation-delay: 0.5s;
+  animation-delay: 0.6s;
 }
 .menu .menuBloc__specialite:nth-child(3) {
   animation: apparition 1s ease-out both;
-  animation-delay: 0.75s;
+  animation-delay: 0.9s;
 }
 .menu .menuBloc__specialite:nth-child(4) {
   animation: apparition 1s ease-out both;
-  animation-delay: 1s;
+  animation-delay: 1.2s;
+}
+.menu .menuBloc__specialite:hover .menuBloc__ok {
+  margin-right: -2px;
+  animation: valide 0.2s ease-in-out;
+}
+.menu .menuBloc__specialite .prix {
+  display: flex;
+  padding: 5px;
+  height: 100%;
+  width: 2em;
+  align-items: flex-end;
+  margin-right: 1em;
+}
+.menu .menuBloc__ok {
+  height: 100%;
+  width: 3em;
+  background-color: #99e2d0;
+  color: #fff;
+  text-align: center;
+  font-size: 1.1em;
+  padding: 1em;
+  border-radius: 0 0.5em 0.5em 0;
+  margin-right: -10rem;
+  transition: all 0.2s ease-in-out;
 }
 .menu .menuBloc__txt {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: fade(10px) ellipsis;
   width: 280px;
+  padding: 5px 15px;
 }
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Bouton ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -237,11 +265,22 @@ img {
 @keyframes apparition {
   0% {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(30px);
   }
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+@keyframes valide {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
