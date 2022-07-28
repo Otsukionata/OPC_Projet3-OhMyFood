@@ -1,4 +1,78 @@
 @charset "UTF-8";
+.loader {
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f6f6f6;
+  opacity: 1;
+  z-index: 99999;
+  animation: endloader 1s ease 3s forwards;
+}
+.loader__inner {
+  position: relative;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  background: linear-gradient(#9356dc, #ff79da, #99e2d0);
+  animation: spinner 1.2s linear infinite;
+}
+.loader__inner span {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: linear-gradient(#9356dc, #ff79da, #99e2d0);
+}
+.loader__inner span:nth-child(1) {
+  filter: blur(5px);
+}
+.loader__inner span:nth-child(2) {
+  filter: blur(10px);
+}
+.loader__inner span:nth-child(3) {
+  filter: blur(25px);
+}
+.loader__inner span:nth-child(4) {
+  filter: blur(50px);
+}
+.loader__inner::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  background: #f6f6f6;
+  border: solid white 10px;
+  border-radius: 50%;
+}
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes endloader {
+  0% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+    transform: translate(0, 0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(0, -100%);
+  }
+}
+
 @keyframes pulsation {
   0% {
     transform: scale(1);
@@ -10,6 +84,43 @@
     transform: scale(1);
   }
 }
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Header ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+header {
+  /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Index : localisation et phrase d'accroche ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+  /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Pages restaurants : Flèche retour ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+  /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Pages restaurants : Image de couverture ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+}
+header .bandeau {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 60px;
+  background-color: #fff;
+}
+header .localisation {
+  display: flex;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+}
+header .localisation i {
+  margin-right: 5px;
+}
+header .explore {
+  background-color: #f6f6f6;
+  padding: 20px;
+}
+header__fleche {
+  position: absolute;
+  left: 20px;
+}
+header .couverture {
+  position: absolute;
+  top: 6vh;
+}
+
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Footer ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 footer {
   background-color: #353535;
@@ -83,26 +194,6 @@ img {
 }
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Header ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-header .logo {
-  width: 100%;
-  height: 60px;
-  padding: 0.5rem;
-  background-color: #fff;
-  box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.3);
-}
-header .localisation {
-  display: flex;
-  height: 50px;
-  align-items: center;
-  justify-content: center;
-}
-header .localisation i {
-  margin-right: 5px;
-}
-header .explore {
-  background-color: #f6f6f6;
-  padding: 20px;
-}
 header .btn {
   display: flex;
   align-items: center;
@@ -113,7 +204,7 @@ header .btn {
   color: #fff;
   border: none;
   border-radius: 25px;
-  box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.3019607843);
   height: 50px;
   width: 250px;
   margin: 20px auto;
@@ -162,7 +253,7 @@ header .btn:hover {
   width: 350px;
   background-color: #f6f6f6;
   border-radius: 20px;
-  box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.3019607843);
   font-weight: 500;
   padding-left: 15px;
 }
@@ -189,7 +280,7 @@ header .btn:hover {
   margin: 30px auto;
   border-radius: 0.8em;
   background-color: #fff;
-  box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.3019607843);
 }
 .carte__img {
   object-fit: cover;

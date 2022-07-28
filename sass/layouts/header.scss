@@ -1,0 +1,43 @@
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Header ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+header {
+  .bandeau {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    background-color: #fff;
+    /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Index : localisation et phrase d'accroche ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+    .localisation {
+      display: flex;
+      height: 50px;
+      align-items: center;
+      justify-content: center;
+      i {
+        margin-right: 5px;
+      }
+    }
+
+    .explore {
+      // Accroche
+      background-color: #f6f6f6;
+      padding: 20px;
+    }
+    
+      /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Pages restaurants : Flèche retour ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+      &__fleche {
+        position: absolute;
+        left: 20px;
+        height: 20px;
+        width: 50px;
+      }
+    
+      /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Pages restaurants : Image de couverture ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+      .couverture {
+        position: absolute;
+        top: 10vh;
+      }
+  }
+
+}

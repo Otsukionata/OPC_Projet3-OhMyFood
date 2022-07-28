@@ -27,3 +27,8 @@ Vous décidez alors, avec l’équipe, que le site contiendra 4 menus dans un pr
 Pour ce projet, tout le code sera versionné sur Github avec des commits réguliers pour suivre son avancement et publier le site en ligne plus facilement.
 
 Vous avez désormais tous les éléments pour construire ce site mobile. Vous vous lancez dans cette nouvelle aventure !
+
+
+Instructions techniques :
+
+Pour activer la compilation des CSS, penser à modifier le nom du ficher scss et du css dans le script du json : main.scss pour modifier style.css et resto.scss -> resto.css

@@ -1,5 +1,6 @@
 @use "abstracts/variables";
 @use "abstracts/mixins";
+@use "layouts/header.scss";
 @use "layouts/footer.scss";
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Aspect général du site ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -52,27 +53,6 @@ img {
   max-height: 100%;
 }
 
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Header ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-.bandeau {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  width: 100%;
-  height: 60px;
-  background-color: #fff;
-
-  &__fleche {
-    position: absolute;
-    left: 20px;
-  }
-  /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Image de couverture ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-  .couverture {
-    position: absolute;
-    top: 6vh;
-  }
-}
-
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Menu ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 .menu {
   width: 100%;
@@ -109,7 +89,7 @@ img {
       &:hover {
         opacity: 1;
         transform: scale(1.3);
-        animation: pulsation 0.2s infinite;
+        animation: pulsation 0.4s infinite;
       }
     }
 

@@ -10,6 +10,43 @@
     transform: scale(1);
   }
 }
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Header ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+header .bandeau {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  background-color: #fff;
+  /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Index : localisation et phrase d'accroche ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+  /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Pages restaurants : Flèche retour ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+  /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Pages restaurants : Image de couverture ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+}
+header .bandeau .localisation {
+  display: flex;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+}
+header .bandeau .localisation i {
+  margin-right: 5px;
+}
+header .bandeau .explore {
+  background-color: #f6f6f6;
+  padding: 20px;
+}
+header .bandeau__fleche {
+  position: absolute;
+  left: 20px;
+  height: 20px;
+  width: 50px;
+}
+header .bandeau .couverture {
+  position: absolute;
+  top: 10vh;
+}
+
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Footer ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 footer {
   background-color: #353535;
@@ -78,26 +115,6 @@ img {
   max-height: 100%;
 }
 
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Header ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-.bandeau {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  width: 100%;
-  height: 60px;
-  background-color: #fff;
-  /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Image de couverture ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-}
-.bandeau__fleche {
-  position: absolute;
-  left: 20px;
-}
-.bandeau .couverture {
-  position: absolute;
-  top: 6vh;
-}
-
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Menu ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 .menu {
   width: 100%;
@@ -129,7 +146,7 @@ img {
 .menu .icones .fa-solid:hover {
   opacity: 1;
   transform: scale(1.3);
-  animation: pulsation 0.2s infinite;
+  animation: pulsation 0.4s infinite;
 }
 .menu .icones .fa-regular {
   position: absolute;
@@ -159,7 +176,7 @@ img {
   line-height: 23px;
   padding: 5px 15px;
   margin: 20px;
-  box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.3019607843);
   border-radius: 10px;
 }
 .menu .menuBloc__txt,
@@ -181,7 +198,7 @@ img {
   color: #fff;
   border: none;
   border-radius: 25px;
-  box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.3019607843);
   height: 50px;
   width: 250px;
   margin: 50px auto 0;
