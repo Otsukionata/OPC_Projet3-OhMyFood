@@ -73,6 +73,7 @@
   }
 }
 
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Animations de spetits cœurs ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 @keyframes pulsation {
   0% {
     transform: scale(1);
@@ -84,8 +85,36 @@
     transform: scale(1);
   }
 }
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Animations du menu ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+@keyframes apparition {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes validation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes rouleIco {
+  0% {
+    transform: rotate(260deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Header ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 header {
+  background-color: #fff;
   /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Général : logo ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
   /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Index : localisation et phrase d'accroche ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 }
@@ -101,7 +130,7 @@ header .bandeau {
   /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Pages restaurants : Flèche retour ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
   /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Pages restaurants : Image de couverture ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 }
-header .bandeau .explore {
+header .bandeau .accroche {
   background-color: #f6f6f6;
   padding: 20px;
 }

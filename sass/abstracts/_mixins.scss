@@ -1,3 +1,5 @@
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Animations de spetits cœurs ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
 @keyframes pulsation {
   0% {
     transform: scale(1);
@@ -7,5 +9,37 @@
   }
   100% {
     transform: scale(1);
+  }
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Animations du menu ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+@keyframes apparition {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes validation {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes rouleIco {
+  0% {
+    transform: rotate(260deg);
+  }
+  100% {
+    transform: rotate(0deg);
   }
 }
