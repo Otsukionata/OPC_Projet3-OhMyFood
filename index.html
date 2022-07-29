@@ -24,14 +24,14 @@
 <body>
     <!-- **************************** Loader **************************** -->
 
-    <div class="loader">
+    <!-- <div class="loader">
         <div class="loader__inner">
             <span></span>
             <span></span>
             <span></span>
             <span></span>
         </div>
-    </div>
+    </div> -->
 
     <!-- **************************** Tête du site : Logo et localisation **************************** -->
     <header>
@@ -52,6 +52,7 @@
             <div class="btn">
                 <p>Explorez nos restaurants</p>
             </div>
+        </div>
     </header>
 
     <!-- **************************** Comment ça marche **************************** -->
@@ -86,74 +87,86 @@
         <!-- **************************** Les restaurants **************************** -->
         <section class="restaurants">
             <h4>Restaurants</h4>
-            <div class="carte nouveau">
+
+            <!-- ~~~~~~~~~~~~~~~ Conteneur global des cartes ~~~~~~~~~~~~~~~ -->
+            <div class="cartes_conteneur">
+
+                <!-- ~~~~~~~~~~~~~~~ Carte : Palette du goût ~~~~~~~~~~~~~~~ -->
                 <a href="palette-du-gout.html">
-                    <div class="carte__img">
-                        <img src="images/restaurants/resto1_palette.jpg"
-                            alt="Photo de restaurant avec assiette en premier plan">
-                    </div>
-                    <div class="carte__description">
-                        <div>
-                            <h5>La palette du goût</h5>
-                            <p>Ménilmontant</p>
-                        </div>
-                        <div class="icones">
-                            <i class="fa-regular fa-heart"></i>
-                            <i class="fa-solid fa-heart"></i>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <a href="note_enchantee.html">
                 <div class="carte nouveau">
-                    <div class="carte__img">
-                        <img src="images/restaurants/resto2_enchante.jpg"
-                            alt="Table dressée avec plats servis vus du dessus">
-                    </div>
-                    <div class="carte__description">
-                        <div>
-                            <h5>La note enchantée</h5>
-                            <p>Charonne</p>
+                        <div class="carte__img">
+                            <img src="images/restaurants/resto1_palette.jpg"
+                                alt="Photo de restaurant avec assiette en premier plan">
                         </div>
-                        <div class="icones">
-                            <i class="fa-regular fa-heart"></i>
-                            <i class="fa-solid fa-heart"></i>
-                        </div>
-                    </div>
-            </a>
-            </div>
-            <div class="carte">
-                <a href="a_la_francaise.html">
-                    <div class="carte__img">
-                        <img src="images/restaurants/resto3_fr.jpg"
-                            alt="Assiette de fromage type mozza servies sur une tranche de pain">
-                    </div>
-                    <div class="carte__description">
-                        <div>
-                            <h5>À la Française</h5>
-                            <p>Cité Rouge</p>
-                        </div>
-                        <div class="icones">
-                            <i class="fa-regular fa-heart"></i>
-                            <i class="fa-solid fa-heart"></i>
+                        <div class="carte__description">
+                            <div>
+                                <h5>La palette du goût</h5>
+                                <p>Ménilmontant</p>
+                            </div>
+                            <div class="icones">
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
                         </div>
                     </div>
                 </a>
-            </div>
-            <div class="carte">
-                <a href="delice_des_sens.html">
-                    <div class="carte__img">
-                        <img src="images/restaurants/resto4_delices.jpg"
-                            alt="Assiette longue contenant un plat de poisson">
-                    </div>
-                    <div class="carte__description">
-                        <div>
-                            <h5>Le délice des sens</h5>
-                            <p>Folie-Ménicourt</p>
+
+                <!-- ~~~~~~~~~~~~~~~ Carte : Note enchantée ~~~~~~~~~~~~~~~ -->
+                <a href="note_enchantee.html">
+                    <div class="carte nouveau">
+                        <div class="carte__img">
+                            <img src="images/restaurants/resto2_enchante.jpg"
+                                alt="Table dressée avec plats servis vus du dessus">
                         </div>
-                        <div class="icones">
-                            <i class="fa-regular fa-heart"></i>
-                            <i class="fa-solid fa-heart"></i>
+                        <div class="carte__description">
+                            <div>
+                                <h5>La note enchantée</h5>
+                                <p>Charonne</p>
+                            </div>
+                            <div class="icones">
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- ~~~~~~~~~~~~~~~ Carte : À la Française ~~~~~~~~~~~~~~~ -->
+                <a href="a_la_francaise.html">
+                    <div class="carte">
+                        <div class="carte__img">
+                            <img src="images/restaurants/resto3_fr.jpg"
+                                alt="Assiette de fromage type mozza servies sur une tranche de pain">
+                        </div>
+                        <div class="carte__description">
+                            <div>
+                                <h5>À la Française</h5>
+                                <p>Cité Rouge</p>
+                            </div>
+                            <div class="icones">
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- ~~~~~~~~~~~~~~~ Carte : Délice des sens ~~~~~~~~~~~~~~~ -->
+                <a href="delice_des_sens.html">
+                    <div class="carte">
+                        <div class="carte__img">
+                            <img src="images/restaurants/resto4_delices.jpg"
+                                alt="Assiette longue contenant un plat de poisson">
+                        </div>
+                        <div class="carte__description">
+                            <div>
+                                <h5>Le délice des sens</h5>
+                                <p>Folie-Ménicourt</p>
+                            </div>
+                            <div class="icones">
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
                         </div>
                     </div>
                 </a>
