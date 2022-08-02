@@ -23,22 +23,37 @@ h1 {
 }
 
 h2 {
-  margin: 25px;
+  font-family: "Shrikhand", cursive;
   font-size: 2em;
-  font-weight: 500;
-  text-align: center;
 }
 
 h3 {
   font-size: 1.3em;
   font-weight: 300;
-  text-align: center;
+  margin: 30px 20px 0 20px;
+  position: relative;
+
+  &::after {
+    content: "";
+    top: 1.4em;
+    left: 0;
+    position: absolute;
+    height: 0.1rem;
+    width: 2rem;
+    background-color: variables.$color-tertiary;
+  }
 }
 
 h4 {
   margin: 0 30px;
   font-size: 1.6em;
   font-weight: 500;
+  text-align: left;
+}
+
+h5 {
+  font-size: 0.8em;
+  font-weight: 700;
   text-align: left;
 }
 
@@ -58,9 +73,24 @@ img {
   border-radius: variables.$img-radius;
 }
 
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Header ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Phrases d'accroche ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.accroche__principal {
+  text-align: center;
+  margin: 25px;
+  font-size: 2em;
+  font-weight: 500;
+
+  &:nth-child(2) {
+    font-size: 1.3em;
+    font-weight: 300;
+    text-align: center;
+  }
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Header et bouton principal ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 header {
   background-color: variables.$color-quaternary;
+
   .btn {
     display: flex;
     align-items: center;
@@ -103,7 +133,7 @@ header {
     margin: 15px;
     display: flex;
     flex-wrap: wrap;
-    
+
     @media screen and (max-width: 768px) {
       flex-direction: column;
       justify-content: center;
@@ -210,7 +240,7 @@ header {
 
   .fa-solid {
     position: absolute;
-    right: 10px;
+    right: 3px;
     color: transparent;
     background: linear-gradient(
       180deg,
@@ -231,7 +261,7 @@ header {
 
   .fa-regular {
     position: absolute;
-    right: 10px;
+    right: 3px;
 
     &:hover {
       opacity: 0;
@@ -253,5 +283,228 @@ header {
     padding: 0.5em;
     border-radius: 0.2em;
     box-shadow: 1px 1px 20px black;
+  }
+}
+
+// Pages des restaurants
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Menu ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.menu {
+  width: 100%;
+  background-color: variables.$color-quaternary;
+  border-radius: 3rem 3rem 0 0;
+  position: relative;
+  top: -8vh;
+
+  &__titre {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px;
+
+    &--nomResto {
+      min-width: 2rem;
+
+      @media screen and (min-width: 360px) and (max-width: 400px) {
+        width: 250px;
+      }
+    }
+    .icones {
+      position: relative;
+
+      .fa-solid {
+        position: absolute;
+        right: 3px;
+        top: -8px;
+      }
+
+      .fa-regular {
+        position: absolute;
+        right: 3px;
+        top: -8px;
+
+        &:hover {
+          opacity: 0;
+        }
+      }
+    }
+  }
+}
+.icones {
+  position: relative;
+
+  .fa-solid {
+    position: absolute;
+    right: 10px;
+    top: 0;
+    color: transparent;
+    background: linear-gradient(
+      180deg,
+      variables.$color-primary 0%,
+      variables.$color-secondary 100%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      opacity: 1;
+      transform: scale(1.3);
+      animation: pulsation 0.4s infinite;
+    }
+  }
+
+  .fa-regular {
+    position: absolute;
+    top: 0;
+    right: 10px;
+
+    &:hover {
+      opacity: 0;
+    }
+  }
+}
+
+.menuBloc {
+  display: grid;
+  grid-template-columns: repeat(3, 30%);
+  justify-content: center;
+  gap: 15px;
+
+  h3 {
+    grid-row-start: 1;
+    grid-column-start: 1;
+
+    grid-row-end: 2;
+    grid-column-end: 4;
+  }
+
+  &__specialite {
+    grid: 1fr / 3fr;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    height: 70px;
+    line-height: 23px;
+    white-space: nowrap;
+    overflow: hidden;
+    box-shadow: variables.$box-shadow;
+    border-radius: 0.5em;
+    transition: all 0.2s ease-in-out;
+
+    @for $i from 1 through 4 {
+      &:nth-child(#{$i}) {
+        animation: apparition 1s ease-out both;
+        animation-delay: $i * 0.3s;
+      }
+    }
+
+    &:hover .menuBloc__specialite--ok {
+      margin-right: 0px;
+      animation: validation 0.3s ease-in-out forwards;
+
+      .fa-circle-check {
+        animation: rouleIco 0.3s cubic-bezier(0.5, 0, 1, 1);
+      }
+    }
+
+    &--txt {
+      // border: 1px solid purple;  //debug
+      overflow: hidden;
+      width: 80%;
+      padding: 5px 0 5px 10px;
+    }
+
+    &--prix {
+      display: grid;
+      padding: 5px;
+      height: 100%;
+      width: 20%;
+      align-items: end;
+      justify-content: end;
+      margin-right: 8px;
+      // border: 1px solid purple; //debug
+    }
+
+    &--ok {
+      height: 100%;
+      width: 3em;
+      background-color: variables.$color-tertiary;
+      color: #fff;
+      text-align: center;
+      font-size: 1.1em;
+      padding: 1em;
+      border-radius: 0 0.5em 0.5em 0;
+      margin-right: -3.5rem;
+      transition: all 0.2s ease-in-out;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .menuBloc {
+    display: flex;
+    flex-direction: column;
+
+    &__specialite {
+      display: flex;
+      align-items: flex-end;
+      height: 60px;
+      margin: 20px 20px 0 20px;
+      transition: all 0.2s ease-in-out;
+
+      &--txt {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 90%;
+        padding: 5px 0 5px 10px;
+      }
+
+      &--prix {
+        display: flex;
+        width: 20%;
+        align-items: flex-end;
+        justify-content: flex-end;
+        margin-right: 8px;
+      }
+
+      &--ok {
+        margin-right: -3.7rem;
+        transition: all 0.2s ease-in-out;
+      }
+    }
+  }
+}
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Bouton ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: variables.$color-secondary;
+  background: linear-gradient(
+    176deg,
+    variables.$color-secondary 0%,
+    variables.$color-primary 100%
+  );
+  color: #fff;
+  border-radius: 25px;
+  box-shadow: variables.$box-shadow;
+  height: 50px;
+  width: 250px;
+  margin: 50px auto;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    transform: translateY(2px);
+    background: variables.$color-secondary;
+    background: linear-gradient(
+      180deg,
+      variables.$color-secondary 0%,
+      variables.$color-primary 100%
+    );
+    box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.3);
   }
 }
