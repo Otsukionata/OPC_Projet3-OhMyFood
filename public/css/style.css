@@ -1,4 +1,43 @@
 @charset "UTF-8";
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Animations de spetits cœurs ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+@keyframes pulsation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Animations du menu ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+@keyframes apparition {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes validation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes rouleIco {
+  0% {
+    transform: rotate(260deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
 .loader {
   margin: 0;
   padding: 0;
@@ -73,45 +112,6 @@
   }
 }
 
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Animations de spetits cœurs ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-@keyframes pulsation {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.2);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Animations du menu ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-@keyframes apparition {
-  0% {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-@keyframes validation {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes rouleIco {
-  0% {
-    transform: rotate(260deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
-}
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Header ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 header {
   background-color: #fff;
@@ -540,6 +540,7 @@ header .btn:hover {
 }
 .menuBloc__specialite--txt {
   overflow: hidden;
+  text-overflow: ellipsis;
   width: 80%;
   padding: 5px 0 5px 10px;
 }

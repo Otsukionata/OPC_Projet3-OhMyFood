@@ -1,7 +1,8 @@
-@use "abstracts/variables";
-@use "abstracts/mixins";
+@use "utils/variables";
+@use "utils/mixins";
 
 @use "layouts/loader.scss";
+// @use "components/button.scss";
 
 @use "layouts/header.scss";
 @use "layouts/footer.scss";
@@ -416,6 +417,7 @@ header {
 
     &--txt {
       overflow: hidden;
+      text-overflow: ellipsis;
       width: 80%;
       padding: 5px 0 5px 10px;
     }
