@@ -1,6 +1,8 @@
-@use "layouts/loader.scss";
 @use "abstracts/variables";
 @use "abstracts/mixins";
+
+@use "layouts/loader.scss";
+
 @use "layouts/header.scss";
 @use "layouts/footer.scss";
 
@@ -52,7 +54,7 @@ h4 {
 }
 
 h5 {
-  font-size: 0.8em;
+  font-size: 1em;
   font-weight: 700;
   text-align: left;
 }
@@ -286,7 +288,10 @@ header {
   }
 }
 
-// Pages des restaurants
+//  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//                                  Pages des restaurants
+//  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Menu ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 .menu {
@@ -410,7 +415,6 @@ header {
     }
 
     &--txt {
-      // border: 1px solid purple;  //debug
       overflow: hidden;
       width: 80%;
       padding: 5px 0 5px 10px;
@@ -424,7 +428,6 @@ header {
       align-items: end;
       justify-content: end;
       margin-right: 8px;
-      // border: 1px solid purple; //debug
     }
 
     &--ok {
