@@ -180,6 +180,7 @@ header {
     }
   }
 
+  /* ~~~~~~~~~~~~~~~~ Cœur ~~~~~~~~~~~~~~~~ */ 
   .ico__color {
     position: absolute;
     left: 55px;
@@ -237,7 +238,7 @@ header {
   }
 }
 
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Cœurs ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~ Cœurs ~~~~~~~~~~~~~~~~~~~~~~~~~ */
 .icones {
   position: relative;
 
@@ -315,6 +316,8 @@ header {
         width: 250px;
       }
     }
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~ Cœurs ~~~~~~~~~~~~~~~~~~~~~~~~~ */
     .icones {
       position: relative;
 
@@ -336,6 +339,8 @@ header {
     }
   }
 }
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~ Cœurs animés ~~~~~~~~~~~~~~~~~~~~~~~~~ */
 .icones {
   position: relative;
 
@@ -371,6 +376,8 @@ header {
     }
   }
 }
+
+
 
 .menuBloc {
   display: grid;
@@ -447,6 +454,8 @@ header {
   }
 }
 
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Carte version mobile ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 @media screen and (max-width: 768px) {
   .menuBloc {
     display: flex;
