@@ -604,14 +604,6 @@ header .btn:hover {
   }
 }
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Bouton ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-.btn_flex {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  justify-self: center;
-  align-items: center;
-}
-
 .btn {
   display: flex;
   align-items: center;
