@@ -403,9 +403,6 @@ header {
     transition: all 0.2s ease-in-out;
 
     > * {
-      text-overflow: ellipsis;
-      overflow: hidden;
-      white-space: nowrap;
       width: 100%;
       padding: 5px 0 5px 10px;
     }
@@ -434,6 +431,12 @@ header {
       align-items: end;
       justify-content: end;
       margin: 0 0.9em 0 0;
+    }
+
+    .debordement{
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
     }
 
     &--ok {
@@ -468,7 +471,6 @@ header {
 
       &--txt {
         overflow: hidden;
-        text-overflow: ellipsis;
         width: 90%;
         padding: 5px 0 5px 10px;
       }
@@ -489,6 +491,15 @@ header {
   }
 }
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Bouton ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.btn_flex {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  justify-self: center;
+  align-items: center;
+  
+}
+
 .btn {
   display: flex;
   align-items: center;

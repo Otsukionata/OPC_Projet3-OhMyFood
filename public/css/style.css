@@ -518,9 +518,6 @@ header .btn:hover {
   transition: all 0.2s ease-in-out;
 }
 .menuBloc__specialite > * {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
   width: 100%;
   padding: 5px 0 5px 10px;
 }
@@ -556,6 +553,11 @@ header .btn:hover {
   justify-content: end;
   margin: 0 0.9em 0 0;
 }
+.menuBloc__specialite .debordement {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
 .menuBloc__specialite--ok {
   height: 100%;
   width: 3em;
@@ -586,7 +588,6 @@ header .btn:hover {
   }
   .menuBloc__specialite--txt {
     overflow: hidden;
-    text-overflow: ellipsis;
     width: 90%;
     padding: 5px 0 5px 10px;
   }
@@ -603,6 +604,14 @@ header .btn:hover {
   }
 }
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Bouton ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.btn_flex {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  justify-self: center;
+  align-items: center;
+}
+
 .btn {
   display: flex;
   align-items: center;
