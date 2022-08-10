@@ -1,6 +1,11 @@
-$color-primary: #9356dc;
-$color-secondary: #ff79da;
-$color-tertiary: #99e2d0;
-$color-quaternary: #f6f6f6;
-$box-shadow: 0 0.3rem 1rem #0000004d;
-$img-radius: 0.5rem 0.5rem 0 0;
+$couleur-primaire: rgb(147, 86, 220);
+$couleur-secondaire: rgb(255, 121, 218);
+$couleur-tertiaire: rgb(153, 226, 208);
+$couleur-quaternaire: rgb(246, 246, 246);
+$ombre: 0 0.3rem 1rem #0000004d;
+$img-arrondi: 0.5rem 0.5rem 0 0;
+$degrade-couleur: linear-gradient(
+  to right,
+  $couleur-primaire,
+  $couleur-secondaire
+);
