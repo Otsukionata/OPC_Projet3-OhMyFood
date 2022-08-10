@@ -301,6 +301,7 @@ header .btn:hover {
 .faux-btn {
   position: relative;
   display: flex;
+  /* ~~~~~~~~~~~~~~~~ Cœur ~~~~~~~~~~~~~~~~ */
 }
 .faux-btn__numero {
   position: absolute;
@@ -380,7 +381,7 @@ header .btn:hover {
   font-size: 0.8em;
 }
 
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Cœurs ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~ Cœurs ~~~~~~~~~~~~~~~~~~~~~~~~~ */
 .icones {
   position: relative;
 }
@@ -436,6 +437,7 @@ header .btn:hover {
   justify-content: space-between;
   align-items: center;
   padding: 25px;
+  /* ~~~~~~~~~~~~~~~~~~~~~~~~~ Cœurs ~~~~~~~~~~~~~~~~~~~~~~~~~ */
 }
 .menu__titre--nomResto {
   min-width: 2rem;
@@ -462,6 +464,7 @@ header .btn:hover {
   opacity: 0;
 }
 
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~ Cœurs animés ~~~~~~~~~~~~~~~~~~~~~~~~~ */
 .icones {
   position: relative;
 }
@@ -509,11 +512,17 @@ header .btn:hover {
   align-items: center;
   height: 70px;
   line-height: 23px;
-  white-space: nowrap;
   overflow: hidden;
   box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.3019607843);
   border-radius: 0.5em;
   transition: all 0.2s ease-in-out;
+}
+.menuBloc__specialite > * {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  padding: 5px 0 5px 10px;
 }
 .menuBloc__specialite:nth-child(1) {
   animation: apparition 1s ease-out both;
@@ -538,20 +547,14 @@ header .btn:hover {
 .menuBloc__specialite:hover .menuBloc__specialite--ok .fa-circle-check {
   animation: rouleIco 0.3s cubic-bezier(0.5, 0, 1, 1);
 }
-.menuBloc__specialite--txt {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  width: 80%;
-  padding: 5px 0 5px 10px;
-}
 .menuBloc__specialite--prix {
   display: grid;
   padding: 5px;
   height: 100%;
-  width: 20%;
+  width: 10%;
   align-items: end;
   justify-content: end;
-  margin-right: 8px;
+  margin: 0 0.9em 0 0;
 }
 .menuBloc__specialite--ok {
   height: 100%;
@@ -566,6 +569,7 @@ header .btn:hover {
   transition: all 0.2s ease-in-out;
 }
 
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Carte version mobile ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 @media screen and (max-width: 768px) {
   .menuBloc {
     display: flex;
@@ -577,9 +581,10 @@ header .btn:hover {
     height: 60px;
     margin: 20px 20px 0 20px;
     transition: all 0.2s ease-in-out;
+    overflow: hidden;
+    white-space: nowrap;
   }
   .menuBloc__specialite--txt {
-    white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     width: 90%;
@@ -587,7 +592,7 @@ header .btn:hover {
   }
   .menuBloc__specialite--prix {
     display: flex;
-    width: 20%;
+    width: 10%;
     align-items: flex-end;
     justify-content: flex-end;
     margin-right: 8px;
@@ -617,7 +622,7 @@ header .btn:hover {
   transform: translateY(2px);
   background: #ff79da;
   background: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
-  box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.4);
 }
 
 /*# sourceMappingURL=style.css.map */
