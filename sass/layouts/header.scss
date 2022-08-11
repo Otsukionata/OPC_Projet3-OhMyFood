@@ -10,7 +10,7 @@ header {
     width: 100%;
     height: 60px;
     background-color: #fff;
-    ombre: 0 0.1rem 1.1rem #0000004d;
+    box-shadow: variables.$ombre;
 
     .accroche {
       // Accroche

@@ -107,7 +107,7 @@ header {
     color: #fff;
     border: none;
     border-radius: 25px;
-    ombre: variables.$ombre;
+    box-shadow: variables.$ombre;
     height: 50px;
     width: 250px;
     margin: 20px auto;
@@ -121,7 +121,7 @@ header {
         variables.$couleur-secondaire 0%,
         variables.$couleur-primaire 100%
       );
-      ombre: 0 0.1rem 1.1rem rgba(0, 0, 0, 0.3);
+      box-shadow: 0 0.1rem 1.1rem rgba(0, 0, 0, 0.3);
     }
   }
 }
@@ -166,7 +166,7 @@ header {
     width: 350px;
     background-color: variables.$couleur-quaternaire;
     border-radius: 20px;
-    ombre: variables.$ombre;
+    box-shadow: variables.$ombre;
     font-weight: 500;
     padding-left: 15px;
 
@@ -210,7 +210,7 @@ header {
     margin: 0 auto;
     border-radius: 0.8em;
     background-color: #fff;
-    ombre: variables.$ombre;
+    box-shadow: variables.$ombre;
 
     &__img {
       object-fit: cover;
@@ -284,7 +284,7 @@ header {
     color: darken($color: variables.$couleur-tertiaire, $amount: 40%);
     padding: 0.5em;
     border-radius: 0.2em;
-    ombre: 1px 1px 20px black;
+    box-shadow: 1px 1px 20px black;
   }
 }
 
@@ -392,7 +392,7 @@ header {
     height: 70px;
     line-height: 23px;
     overflow: hidden;
-    ombre: variables.$ombre;
+    box-shadow: variables.$ombre;
     border-radius: 0.5em;
     transition: all 0.2s ease-in-out;
 
@@ -461,7 +461,7 @@ header {
   );
   color: #fff;
   border-radius: 25px;
-  ombre: variables.$ombre;
+  box-shadow: variables.$ombre;
   height: 50px;
   width: 250px;
   margin: 50px auto;
@@ -476,6 +476,6 @@ header {
       variables.$couleur-secondaire 0%,
       variables.$couleur-primaire 100%
     );
-    ombre: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.4);
   }
 }
