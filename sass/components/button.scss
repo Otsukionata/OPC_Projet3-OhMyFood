@@ -1,0 +1,31 @@
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Bouton ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: variables.$couleur-secondaire;
+  background: linear-gradient(
+    176deg,
+    variables.$couleur-secondaire 0%,
+    variables.$couleur-primaire 100%
+  );
+  color: #fff;
+  border-radius: 25px;
+  box-shadow: variables.$ombre;
+  height: 50px;
+  width: 250px;
+  margin: 50px auto;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    transform: translateY(2px);
+    background: variables.$couleur-secondaire;
+    background: linear-gradient(
+      180deg,
+      variables.$couleur-secondaire 0%,
+      variables.$couleur-primaire 100%
+    );
+    box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.4);
+  }
+}
