@@ -4,11 +4,7 @@
   align-items: center;
   justify-content: center;
   background: variables.$couleur-secondaire;
-  background: linear-gradient(
-    176deg,
-    variables.$couleur-secondaire 0%,
-    variables.$couleur-primaire 100%
-  );
+  background: variables.$degrade-couleur;
   color: #fff;
   border-radius: 25px;
   box-shadow: variables.$ombre;
