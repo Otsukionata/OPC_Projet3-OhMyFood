@@ -1,10 +1,10 @@
-@use "utils/variables";
-@use "utils/mixins";
+@use "../utils/variables";
+@use "../utils/mixins";
 
-@use "layouts/loader.scss";
+@use "../layouts/loader.scss";
 
-@use "layouts/header.scss";
-@use "layouts/footer.scss";
+@use "../layouts/header.scss";
+@use "../layouts/footer.scss";
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Aspect général du site ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 * {
@@ -136,6 +136,7 @@ header {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    justify-content: space-between;
   }
 }
 
@@ -477,5 +478,21 @@ header {
       variables.$couleur-primaire 100%
     );
     box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.4);
+  }
+}
+
+
+.footer__liens {
+  display: flex;
+  justify-content: space-between;
+
+  li {
+    margin-right: 5em;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      transform: translateY(1px);
+    }
   }
 }
