@@ -328,7 +328,8 @@ header .btn:hover {
 .faux-btn__txt--violet {
   background-color: #f2eafb;
 }
-.faux-btn .ico__color, .faux-btn .ico__color--violet {
+.faux-btn .ico__color,
+.faux-btn .ico__color--violet {
   position: absolute;
   left: 55px;
   color: #585858;
@@ -504,11 +505,13 @@ header .btn:hover {
   height: 70px;
   line-height: 23px;
   overflow: hidden;
+  white-space: nowrap;
   box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.3019607843);
   border-radius: 0.5em;
   transition: all 0.2s ease-in-out;
 }
-.menuBloc__specialite > * {
+.menuBloc__specialite--txt {
+  overflow: hidden;
   width: 100%;
   padding: 5px 0 5px 10px;
 }
