@@ -11,6 +11,6 @@ $degrade-couleur: linear-gradient(
 );
 $couleur-coeur: linear-gradient(
   180deg,
-  variables.$couleur-primaire 0%,
-  variables.$couleur-secondaire 100%
+  $couleur-primaire 0%,
+  $couleur-secondaire 100%
 );
