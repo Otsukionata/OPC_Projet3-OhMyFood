@@ -46,7 +46,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 110vh;
   background: #f6f6f6;
   opacity: 1;
   z-index: 99999;
@@ -296,19 +296,21 @@ header {
   align-items: center;
   margin: 20px;
   height: 70px;
-  width: 350px;
+  width: 90%;
   background-color: #f6f6f6;
   border-radius: 20px;
   box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.3019607843);
   font-weight: 500;
-  padding-left: 15px;
+  padding-left: 20%;
+  padding-right: 0.1rem;
 }
 .faux-btn__txt--violet {
   background-color: #f2eafb;
 }
-.faux-btn .ico__color, .faux-btn .ico__color--violet {
+.faux-btn .ico__color,
+.faux-btn .ico__color--violet {
   position: absolute;
-  left: 55px;
+  left: 2.7em;
   color: #585858;
 }
 .faux-btn .ico__color--violet {
@@ -330,7 +332,7 @@ header {
 }
 .cartes_conteneur .carte {
   height: 250px;
-  width: 20em;
+  width: 90%;
   margin: 0 auto;
   border-radius: 0.8em;
   background-color: #fff;

@@ -297,7 +297,6 @@ header .btn:hover {
 .faux-btn {
   position: relative;
   display: flex;
-  /* ~~~~~~~~~~~~~~~~ Cœur ~~~~~~~~~~~~~~~~ */
 }
 .faux-btn__numero {
   position: absolute;
